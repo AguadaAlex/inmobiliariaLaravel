@@ -14,7 +14,11 @@ class CreateCaracteristicapropiedadsTable extends Migration
     public function up()
     {
         Schema::create('caracteristicapropiedads', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->UnsignedInteger('propiedad_id');
+            $table->foreign('propiedad_id')->references('id')->on('propiedads');
+            $table->UnsignedInteger('caracteristica_id');
+            $table->foreign('caracteristica_id')->references('id')->on('caracteristicas');
             $table->timestamps();
         });
     }

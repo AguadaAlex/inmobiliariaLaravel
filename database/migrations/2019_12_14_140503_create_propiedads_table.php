@@ -14,7 +14,23 @@ class CreatePropiedadsTable extends Migration
     public function up()
     {
         Schema::create('propiedads', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->UnsignedInteger('tipo_id');
+            $table->foreign('tipo_id')->references('id')->on('tipos');
+            $table->UnsignedInteger('localidad_id');
+            $table->foreign('localidad_id')->references('id')->on('localidads');
+            $table->double('precio');
+            $table->string('calle');
+            $table->string('numero');
+            $table->string('piso');
+            $table->string('dpto');
+            $table->string('estado');
+            $table->string('zona');
+            $table->integer('cantambientes');
+            $table->integer('cantbanos');
+             $table->string('foto');
+            $table->string('observaciones');
+            $table->integer('condicion');
             $table->timestamps();
         });
     }

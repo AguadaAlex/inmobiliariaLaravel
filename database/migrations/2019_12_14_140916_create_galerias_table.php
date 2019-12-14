@@ -14,7 +14,11 @@ class CreateGaleriasTable extends Migration
     public function up()
     {
         Schema::create('galerias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->UnsignedInteger('galeria_id');
+            $table->foreign('galeria_id')->references('id')->on('propiedads');
+            $table->string('imagen');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
