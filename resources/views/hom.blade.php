@@ -9,14 +9,14 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">Propiedad</a>
-        <a href="#">Tipos</a>
+        <a href="/tipos">Tipos</a>
         <a href="#">Localidades</a>
         <a href="#">Caracteristicas</a>
       </div>
 
       <div  class="crearLog">
 
-        <button class="botonCrearLog" onclick="openNav()">Crear</button>
+        <button class="botonCrearLog" onclick="openNav()">CRUD</button>
       </div>
 
 

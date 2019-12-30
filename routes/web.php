@@ -17,7 +17,7 @@
 
 Route::get('/', 'PagesController@Home')->name('home');
 Auth::routes();
-
+Route::resource('/tipos', 'TipoController');
 Route::post('/propiedades','PagesController@Store');
 Route::get('/galerias/{id?}', 'PagesController@galerias')->name('galerias');
 //Route::get('/','PagesController@ListarPropiedades');
